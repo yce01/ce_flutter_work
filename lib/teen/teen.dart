@@ -16,6 +16,16 @@ import 'package:palm_edu/teen/teen_tv_blue.dart';
 class Teen extends StatefulWidget {
   const Teen({Key? key}) : super(key: key);
 
+  // GlobalKey replayKey = GlobalKey();
+  // GlobalKey hotClipKey = GlobalKey();
+  // GlobalKey specialKey = GlobalKey();
+  // GlobalKey ssJoanTVBlueKey = GlobalKey();
+  // GlobalKey musicBannerKey = GlobalKey();
+  // GlobalKey musicFromJoanKey = GlobalKey();
+  // GlobalKey musicTodayKey = GlobalKey();
+  // GlobalKey musicSpecialLiveListKey = GlobalKey();
+  // GlobalKey musicSpecialKey = GlobalKey();
+
   @override
   _TeenState createState() => _TeenState();
 }
@@ -36,7 +46,6 @@ class _TeenState extends State<Teen> {
     TeenMusicToday(),
     TeenMusicSpecialLiveList(),
     TeenMusicSpecial(),
-    TeenBottomBanner(),
   ];
 
   @override
@@ -94,12 +103,12 @@ class _TeenState extends State<Teen> {
                 ),
               ),
               const TeenBanner(),
-              // _shortCut,
               list(),
               const SizedBox(
                 height: 10,
               ),
               item(),
+              TeenBottomBanner(),
             ],
           ),
         ),
@@ -306,7 +315,7 @@ class _TeenState extends State<Teen> {
           itemBuilder: (context, index) {
             return TextButton(
               key: ValueKey(_sectionList[index]),
-              onPressed: () => scrollTo(index),
+              onPressed: () => scrollTo(_section[index]),
               style: TextButton.styleFrom(
                 primary: Colors.deepPurpleAccent,
               ),
@@ -335,7 +344,6 @@ class _TeenState extends State<Teen> {
           TeenMusicToday(),
           TeenMusicSpecialLiveList(),
           TeenMusicSpecial(),
-          TeenBottomBanner(),
         ],
       ),
     );
@@ -345,10 +353,10 @@ class _TeenState extends State<Teen> {
         // if (itemScrollController.isAttached)
           {
             itemScrollController.scrollTo(
-                index: index,
+                index: _section[index],
                 duration: const Duration(milliseconds: 80),
                 curve: Curves.easeInOutCubic,
-                alignment: alignment)
+                alignment: alignment),
           }
       };
 }

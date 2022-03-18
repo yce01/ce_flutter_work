@@ -14,7 +14,7 @@ class _HomePalmstationGuideState extends State<HomePalmstationGuide> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        padding: const EdgeInsets.fromLTRB(20, 20, 20, 10),
+        padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
         child: Column(children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -55,7 +55,7 @@ class _HomePalmstationGuideState extends State<HomePalmstationGuide> {
     final pages = List.generate(
         6,
         (index) => Container(
-              margin: const EdgeInsets.fromLTRB(0, 0, 20, 0),
+              margin: const EdgeInsets.fromLTRB(0, 10, 20, 0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[

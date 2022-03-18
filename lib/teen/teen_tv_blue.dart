@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:palm_edu/teen/teen.dart';
 
 class TeenSSJoanTVBlue extends StatefulWidget {
   const TeenSSJoanTVBlue({Key? key}) : super(key: key);
@@ -11,6 +12,7 @@ class _TeenSSJoanTVBlueState extends State<TeenSSJoanTVBlue> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      // key: Teen().ssJoanTVBlueKey,
       padding: const EdgeInsets.fromLTRB(20, 0, 20, 10),
       child: Column(
           mainAxisAlignment: MainAxisAlignment.start,

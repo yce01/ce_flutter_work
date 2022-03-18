@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'teen.dart';
 
 class TeenReplay extends StatefulWidget {
   const TeenReplay({Key? key}) : super(key: key);
@@ -11,6 +12,7 @@ class _TeenReplayState extends State<TeenReplay> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      // key: Teen().replayKey,
       padding: const EdgeInsets.fromLTRB(20, 0, 20, 10),
       child: Column(
           mainAxisAlignment: MainAxisAlignment.start,

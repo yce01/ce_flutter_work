@@ -13,7 +13,7 @@ class _HomeWordState extends State<HomeWord> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.fromLTRB(20, 20, 20, 10),
+      padding: const EdgeInsets.fromLTRB(20, 20, 20, 00),
       child: Column(
         children: [
           Row(
@@ -56,7 +56,7 @@ class _HomeWordState extends State<HomeWord> {
     final pages = List.generate(
         6,
             (index) => Container(
-          margin: const EdgeInsets.fromLTRB(0, 0, 20, 0),
+          margin: const EdgeInsets.fromLTRB(0, 10, 20, 0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
